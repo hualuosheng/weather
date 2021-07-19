@@ -1,0 +1,38 @@
+{
+  "pages": [
+    //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+    {
+      "path": "pages/home",
+      "style": {
+        "navigationBarTitleText": "公园环境信息查询"
+      }
+    }
+  ],
+  "subPackages": [
+    {
+      "root": "sub-packages/detail",
+      "pages": [
+        {
+          "path": "index",
+          "style": {
+            "navigationBarTitleText": "详情",
+            "navigationBarBackgroundColor": "#2979ff"
+          }
+        }
+      ]
+    }
+  ],
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      "bus-(.*)": "@/components/business/bus/bus-$1/bus-$1.vue",
+      "van-(.*)": "@/components/van/van-$1/van-$1.vue"
+    }
+  },
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  }
+}

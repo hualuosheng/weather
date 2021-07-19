@@ -1,0 +1,27 @@
+@keyframes loading-circle {
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loading-ball {
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes loading-flower {
+  50% {
+    opacity: 0.1;
+  }
+}
+
+@keyframes loading-line {
+  50% {
+    transform: scaleY(1) translateX(10px);
+  }
+}
