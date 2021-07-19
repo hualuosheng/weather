@@ -1,6 +1,6 @@
 <template>
   <view class="container">
-    <view class="piece">
+    <view class="piece" @click="routerLink">
       <view class="common-title">
         海棠公园
       </view>
@@ -38,12 +38,19 @@ export default {
         {
           value: '',
           label: '穿衣指数'
-        },
+        }
       ]
     }
   },
   onLoad() {},
-  methods: {}
+  methods: {
+    routerLink() {
+      console.log(7779999999999999)
+      uni.navigateTo({
+        url: '/sub-packages/detail/index?id=1&name=uniapp'
+      })
+    }
+  }
 }
 </script>
 
