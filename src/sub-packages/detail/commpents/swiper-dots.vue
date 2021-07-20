@@ -38,10 +38,8 @@ export default {
   justify-content: center;
   color: #fff;
   border-radius: 48rpx;
-
 }
 .sign {
   padding: 0 2px;
-  /* transform: translateX(-50%); */
 }
 </style>

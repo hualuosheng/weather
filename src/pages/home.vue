@@ -13,34 +13,39 @@
         </view>
         <image class="info-img" src="@/static/rectangle.png"></image>
       </view>
+      <slidingShaft :list="listShaft" />
     </view>
   </view>
 </template>
 
 <script>
+import slidingShaft from '@/components/sliding-shaft/index.vue'
 export default {
   data() {
     return {
       title: '',
-      list: [
+      listShaft: [
         {
-          value: '',
+          value: '1',
           label: '穿衣指数'
         },
         {
-          value: '',
+          value: '3',
           label: '穿衣指数'
         },
         {
-          value: '',
+          value: '4',
           label: '穿衣指数'
         },
         {
-          value: '',
+          value: '1',
           label: '穿衣指数'
         }
       ]
     }
+  },
+  components: {
+    slidingShaft
   },
   onLoad() {},
   methods: {

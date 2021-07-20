@@ -57,10 +57,23 @@
           <view class="time">2021.01.09</view>
         </view>
         <view class="index-info">对减压具有一定的治愈作用</view>
-        <view class="index-scale">
-          <view class="scale-item" v-for="index in 10" :key="index"
-            >{{ index }}
-          </view>
+        <scaleAxis />
+      </view>
+    </view>
+    <view class="plate">
+      <view class="common-title">
+        健康指数
+      </view>
+      <view class="warning-box">
+        <view class="warning-head">
+          <view class="left"
+            ><image src="@/static/lightning_r@2x.png"></image>
+            <text class="warning-title">黄色预警</text></view
+          >
+          <view class="right">2021.01.09</view>
+        </view>
+        <view class="warning-info">
+          地坛又称方泽坛，是古都北京五坛中的第二大坛。始建于明代嘉靖九年（公元1530年），坐落
         </view>
       </view>
     </view>
@@ -68,10 +81,12 @@
 </template>
 
 <script>
+import scaleAxis from './commpents/scale-axis.vue'
 import swiperDots from './commpents/swiper-dots.vue'
 export default {
   components: {
-    swiperDots
+    swiperDots,
+    scaleAxis
   },
   data() {
     return {
@@ -98,7 +113,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="less" scoped>
 .common-title {
   font-size: 40rpx;
   font-weight: 600;
@@ -220,22 +235,37 @@ export default {
   font-size: 28rpx;
   line-height: 40rpx;
 }
-.index-scale {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 64rpx;
-  margin: 16rpx 0;
-  font-size: 20rpx;
-  color: #fff;
-  background: linear-gradient(
-    90deg,
-    rgba(239, 92, 92, 0.2) 0%,
-    rgba(133, 202, 0, 0.2) 47.92%,
-    rgba(64, 210, 147, 0.2) 100%
-  );
-}
-.scale {
-  width: 82rpx;
+
+.warning-box {
+  margin: 24rpx 0 16rpx;
+
+  .warning-head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .warning-info {
+    line-height: 40rpx;
+    color: #303030;
+    margin-bottom: 48rpx;
+  }
+
+  .left {
+    display: flex;
+    align-items: center;
+  }
+
+  .right {
+    font-size: 24rpx;
+    color: #aeaeae;
+  }
+
+  image {
+    width: 48rpx;
+    height: 48rpx;
+    vertical-align: middle;
+  }
 }
 </style>
